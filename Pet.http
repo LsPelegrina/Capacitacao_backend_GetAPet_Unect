@@ -1,0 +1,13 @@
+GET http://localhost:3000/users
+Content-Type: application/json
+
+### Cadastrar um Aluno
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "name": "Lucas",
+  "age": 20,
+  "ra": "328138123",
+  "cpf": "141271241341"
+}
