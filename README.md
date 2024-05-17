@@ -12,7 +12,7 @@ O modelo de aluno deve possuir os seguintes atributos:<br>
 ● createdAt (timestamps do mongoose)<br>
 ● updatedAt (timestamps do mongoose)<br>
 
-Já o modelo de pet deve possuir os seguintes atributos:
+Já o modelo de pet deve possuir os seguintes atributos:<br>
 ● name (string)<br>
 ● age (number)<br>
 ● weight (number)<br>
