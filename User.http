@@ -7,8 +7,8 @@ POST http://localhost:3000/users/register
 Content-Type: application/json
 
 {
-  "name": "Lucas de Souza Pelegrina",
-  "email": "lking4@gmail.com",
+  "name": "Lucas de Souza Pelegrina3",
+  "email": "lking3@gmail.com",
   "phone": "9123123123",
   "password": "123321123",
   "confirmpassword": "123321123"
@@ -20,7 +20,7 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-  "email": "lking4@gmail.com",
+  "email": "lking3@gmail.com",
   "password": "123321123"
 }
 
@@ -28,18 +28,18 @@ Content-Type: application/json
 ### Checar um usuario
 GET http://localhost:3000/users/checkuser
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hIiwiaWQiOiI2NjMwNTMyZTlkYWQ1YjI1MTU0NGIwMDEiLCJpYXQiOjE3MTQ0NDMxNTF9._1HqhFke31rprnExshIUSZFs0W7vlZrVUOtNjw5eBb4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hIiwiaWQiOiI2NjNjNDJkOTc3Mzg5OTk3ZmY2MDIwOGEiLCJpYXQiOjE3MTUyMjUzMjN9.8FgYGXSQ93GRhtGDutg3PQloKZwn3srpsaXDLzZNC4A
 
 
 ### Procurar usuario pelo Id
-GET http://localhost:3000/users/6630532e9dad5b251544b001
+GET http://localhost:3000/users/66305b896fb0c90faa29fab7
 Content-Type: application/json
 
 
 ### Atualização de usuario por Id
-Patch http://localhost:3000/users/edit/6630532e9dad5b251544b001
+Patch http://localhost:3000/users/edit/663c4a23b6c9371055bfbf06
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hIiwiaWQiOiI2NjMwNTMyZTlkYWQ1YjI1MTU0NGIwMDEiLCJpYXQiOjE3MTQ0NDMxNTF9._1HqhFke31rprnExshIUSZFs0W7vlZrVUOtNjw5eBb4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEiLCJpZCI6IjY2M2M0YTIzYjZjOTM3MTA1NWJmYmYwNiIsImlhdCI6MTcxNTIyODEwM30.berpLkX8bdG0ZZar0rJ5x7_HwW1RBo2pqgP6w6z5-ro
 
 {
   "name": "Lucas de Souza",
@@ -50,6 +50,6 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291
 }
 
 ### Deletar um usuário por Id
-Delete http://localhost:3000/users/6630532e9dad5b251544b001
+Delete http://localhost:3000/users/663c53f4f1ea8b90c84b319c
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hIiwiaWQiOiI2NjMwNTMyZTlkYWQ1YjI1MTU0NGIwMDEiLCJpYXQiOjE3MTQ0NDMxNTF9._1HqhFke31rprnExshIUSZFs0W7vlZrVUOtNjw5eBb4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hIiwiaWQiOiI2NjNjNTNmNGYxZWE4YjkwYzg0YjMxOWMiLCJpYXQiOjE3MTUyMzEyNDN9.mtOcvhxltuCnRpyg-yQ-QkBiP4D_AsJ7KRkKmCdzaX0

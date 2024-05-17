@@ -126,7 +126,14 @@ module.exports = class UserController {
 
   static async editUser(req, res) {
     
-    const user = await User.findOne({_id: req.id})
+    const id = req.params.id
+
+    if(id !== req.id){
+      res.status(422).json({ message: 'Houve um problema em processar sua solicitação, tente novamente mais tarde!' })
+      return
+    } 
+
+    const user = await User.findOne({_id: id})
 
     const {name, email, phone, password, confirmpassword} = req.body
 
@@ -187,17 +194,25 @@ module.exports = class UserController {
 
   static async deleteUser(req, res) {
 
-  const user = await User.findOne({_id: req.id})
-  if(!user) {
-    res.status(422).json({ message: 'O usuário não foi encontrado!'})
-    return
-  }
+    const id = req.params.id
+
+    if(id !== req.id){
+      res.status(422).json({ message: 'Houve um problema em processar sua solicitação, tente novamente mais tarde!' })
+      return
+    } 
+
+    const user = await User.findOne({_id: id})
+
+    if(!user) {
+      res.status(422).json({ message: 'O usuário não foi encontrado!'})
+      return
+    }
     
-  try {
-    await User.deleteOne({_id: req.id})
-    res.status(200).json({message: 'O Usuário foi removido com sucesso!'})
-  } catch(error) {
-    res.status(500).json({error: error})
-  }
+    try {
+      await User.deleteOne({_id: req.id})
+      res.status(200).json({message: 'O Usuário foi removido com sucesso!'})
+    } catch(error) {
+      res.status(500).json({error: error})
+    }
   }
 }

@@ -1,13 +1,68 @@
-GET http://localhost:3000/users
+GET http://localhost:3000/pets
 Content-Type: application/json
 
-### Cadastrar um Aluno
-POST http://localhost:3000/users/register
+
+### Cadastro de um pet
+POST http://localhost:3000/pets/create
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hMyIsImlkIjoiNjYzYzU0MDFmMWVhOGI5MGM4NGIzMWEyIiwiaWF0IjoxNzE1MjI5Nzg4fQ.ELNIx1zWjqXCxDwas3CFu7xbddLvIjtbFd6H41wlJOQ
 
 {
-  "name": "Lucas",
-  "age": 20,
-  "ra": "328138123",
-  "cpf": "141271241341"
+  "name": "Petinho3",
+  "age": 12,
+  "weight": 5,
+  "color": "Branco"
 }
+
+### Listar todos os pets pela data de inclusão no sistema
+GET http://localhost:3000/pets
+Content-Type: application/json
+
+
+### Listar todos os pets cadastrados do usuário
+GET http://localhost:3000/pets/mypets
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hIiwiaWQiOiI2NjNjNTNmNGYxZWE4YjkwYzg0YjMxOWMiLCJpYXQiOjE3MTUyMjk4NjR9.ufhUAycSVgZCbVoqrHI8NwwpNsHnQ-aEgmQTd0rzzYU
+
+
+### Listar todos os pets adotados pelo adotante
+GET http://localhost:3000/pets/myadoptions
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hMyIsImlkIjoiNjYzYzU0MDFmMWVhOGI5MGM4NGIzMWEyIiwiaWF0IjoxNzE1MjMxNzI2fQ.7breSQkR_8jpfiDpCdCJgdiNBoaGWcyjQ88E7ofuuiE
+
+
+### Procurar pet pelo Id
+GET http://localhost:3000/pets/663c5438f1ea8b90c84b31a6
+Content-Type: application/json
+
+
+### Deletar um pet pelo Id
+DELETE http://localhost:3000/pets/663c5438f1ea8b90c84b31a6
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hIiwiaWQiOiI2NjNjNTNmNGYxZWE4YjkwYzg0YjMxOWMiLCJpYXQiOjE3MTUyMzAzNzd9.SAku535_NFP3r3suhB-oRVU8wrHmMbzzP-Ygb-hEJ-A
+
+
+### Atualização de pet por Id
+Patch http://localhost:3000/pets/663c5453f1ea8b90c84b31aa
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hMiIsImlkIjoiNjYzYzUzZmNmMWVhOGI5MGM4NGIzMTlmIiwiaWF0IjoxNzE1MjMxMzA5fQ.cmv3DXVRKI6jAlYHZ3FYdmHETt89_4ck4Pidvg792A4
+
+{
+  "name": "Petão2",
+  "age": 11,
+  "weight": 6,
+  "color": "Preto"
+}
+
+### Agendar visita de adoção
+Patch http://localhost:3000/pets/schedule/663c5453f1ea8b90c84b31aa
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hMyIsImlkIjoiNjYzYzU0MDFmMWVhOGI5MGM4NGIzMWEyIiwiaWF0IjoxNzE1MjMxMzg5fQ.ZeyzRpP4Q9Vq8t2Lj2a5vBq532jleoFadTFwBv47K34
+
+
+### Concluir adoção de Pet
+Patch http://localhost:3000/pets/conclude/663c5453f1ea8b90c84b31aa
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVjYXMgZGUgU291emEgUGVsZWdyaW5hMiIsImlkIjoiNjYzYzUzZmNmMWVhOGI5MGM4NGIzMTlmIiwiaWF0IjoxNzE1MjMxNjA1fQ.w3JqfnrVtXG2U2x20jiI9iBOljkk2uyfJ1yeRUNi1Ss
+
+

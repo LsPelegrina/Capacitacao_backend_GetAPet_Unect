@@ -30,7 +30,7 @@ const checkToken = (req, res, next) => {
     const decoded = jwt.verify(token, secret)
     req.id = decoded.id
     next()
-        // terminar 
+       
   } catch (err) {
     return res.status(401).json({ message: "Token inválido!"})
   }
